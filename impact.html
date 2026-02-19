@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Environmental Impact | Solar Intelligence Platform</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="impact-body">
+
+<header>
+    <div class="logo">Solar Intelligence Platform</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="investor.html">Investor</a>
+        <a href="client.html">Client</a>
+        <a href="impact.html" class="active">Impact</a>
+        <a href="consultation.html">Consultation</a>
+    </nav>
+</header>
+
+<section class="impact-section">
+
+    <div class="impact-header">
+        <h1>Measure Your Environmental Impact</h1>
+        <p>
+            See how your solar system contributes to reducing carbon emissions
+            and accelerating Ethiopia’s clean energy transition.
+        </p>
+    </div>
+
+    <div class="impact-calculator">
+
+        <div class="input-group">
+            <label>Enter Your Solar System Size (kW)</label>
+            <input type="number" id="systemInput" placeholder="e.g. 10">
+        </div>
+
+        <button onclick="calculateImpact()" class="btn-glow">
+            Calculate Environmental Impact
+        </button>
+
+        <div class="impact-results">
+
+            <div class="impact-item">
+                <span>CO₂ Reduced Per Year</span>
+                <strong id="co2Year">--</strong>
+            </div>
+
+            <div class="impact-item">
+                <span>CO₂ Reduced Over 25 Years</span>
+                <strong id="co225">--</strong>
+            </div>
+
+            <div class="impact-item">
+                <span>Equivalent Trees Planted</span>
+                <strong id="trees">--</strong>
+            </div>
+
+            <div class="impact-item">
+                <span>Carbon Removal Market Value</span>
+                <strong id="carbonValue">--</strong>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="impact-cta">
+        <h2>Be Part of Ethiopia’s Clean Energy Movement</h2>
+        <p>
+            Every kilowatt installed strengthens energy independence,
+            reduces fossil dependency, and supports a sustainable future.
+        </p>
+        <a href="client.html" class="btn-glow big-btn">
+            Install Solar Now
+        </a>
+    </div>
+
+</section>
+
+<script src="js/impact.js"></script>
+
+</body>
+</html>

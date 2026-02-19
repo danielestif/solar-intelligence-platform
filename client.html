@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Client Solar Calculator | Solar Intelligence Platform</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="client-body">
+
+<header>
+    <div class="logo">Solar Intelligence Platform</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="investor.html">Investor</a>
+        <a href="client.html" class="active">Client</a>
+        <a href="consultation.html">Consultation</a>
+    </nav>
+</header>
+
+<section class="client-section">
+
+    <div class="client-header">
+        <h1>Ethiopia Solar Investment Calculator</h1>
+        <p>
+            Estimate your solar system size, installation cost, annual savings,
+            and projected return based on average sunlight data across Ethiopia.
+        </p>
+    </div>
+
+    <div class="client-container">
+
+        <!-- LEFT SIDE INPUT -->
+        <div class="client-form-card">
+
+            <h2>Enter Your Details</h2>
+
+            <div class="input-group">
+                <label>Monthly Electricity Bill (ETB)</label>
+                <input type="number" id="bill" placeholder="e.g. 4500">
+            </div>
+
+            <div class="input-group">
+                <label>Available Roof Area (m²)</label>
+                <input type="number" id="roof" placeholder="e.g. 100">
+            </div>
+
+            <div class="input-group">
+                <label>Select Your City</label>
+                <select id="location" onchange="setSunlight()">
+                    <option value="">Choose City</option>
+                    <option value="Addis Ababa">Addis Ababa</option>
+                    <option value="Dire Dawa">Dire Dawa</option>
+                    <option value="Bahir Dar">Bahir Dar</option>
+                    <option value="Hawassa">Hawassa</option>
+                    <option value="Mekelle">Mekelle</option>
+                    <option value="Adama">Adama</option>
+                </select>
+            </div>
+
+            <div class="sun-info">
+                <p id="avgSunlightText"></p>
+            </div>
+
+            <div class="input-group">
+                <label>Override Sunlight Hours (Optional)</label>
+                <input type="number" id="customSun" placeholder="Only if you know exact value">
+            </div>
+
+            <button onclick="calculateSolar()" class="btn-glow">
+                Calculate Solar Potential
+            </button>
+
+        </div>
+
+        <!-- RIGHT SIDE RESULTS -->
+        <div class="client-results-card">
+
+            <h2>Projection Results</h2>
+
+            <div class="result-item">
+                <span>Recommended System Size</span>
+                <strong id="systemSize">--</strong>
+            </div>
+
+            <div class="result-item">
+                <span>Estimated Installation Cost</span>
+                <strong id="installCost">--</strong>
+            </div>
+
+            <div class="result-item">
+                <span>Estimated Annual Savings</span>
+                <strong id="annualSavings">--</strong>
+            </div>
+
+            <div class="result-item">
+                <span>Estimated ROI Period</span>
+                <strong id="roiYears">--</strong>
+            </div>
+
+        </div>
+<div class="client-cta">
+
+    <h2>Ready to Own Your Power?</h2>
+
+    <p>
+        Ethiopia receives some of the highest solar irradiation levels in Africa.
+        With rising electricity demand and grid instability, now is the time to
+        secure your independent solar energy system.
+    </p>
+    <p class="urgency-text">
+    Every month you delay, you continue paying rising electricity costs.
+    Invest once. Save for 20+ years.
+</p>
+
+
+    <div class="usp-list">
+        <div class="usp-item">
+            ⚡ Designed for Ethiopian Climate & Infrastructure
+        </div>
+        <div class="usp-item">
+            💰 High ROI with Long-Term Energy Savings
+        </div>
+        <div class="usp-item">
+            🔋 Premium Tier-1 Solar Panels & Smart Inverters
+        </div>
+        <div class="usp-item">
+            🛠 Professional Installation & After-Sales Support
+        </div>
+        <div class="usp-item">
+            🌍 Reduce Carbon Emissions & Support Clean Ethiopia
+        </div>
+    </div>
+
+    <div class="cta-buttons">
+        <a href="consultation.html" class="btn-glow big-btn">
+            Request Installation Consultation
+        </a>
+
+        <a href="#" class="btn-outline big-btn">
+            View Available Solar Packages
+        </a>
+    </div>
+
+</div>
+<section class="sales-engine">
+
+    <!-- INSTALL COUNTER -->
+    <div class="install-counter">
+        <h2>Trusted Across Ethiopia</h2>
+        <div class="counter-number" id="installCounter">0</div>
+        <p>Solar Systems Installed Nationwide</p>
+    </div>
+
+    <!-- PRODUCT PACKAGES -->
+    <div class="packages-section">
+
+        <h2>Choose Your Solar Power Package</h2>
+
+        <div class="packages-grid">
+
+            <div class="package-card">
+                <h3>5kW Residential</h3>
+                <p class="price">325,000 ETB</p>
+                <ul>
+                    <li>Ideal for Homes & Small Offices</li>
+                    <li>Average 600–750 kWh/month</li>
+                    <li>Smart Hybrid Inverter</li>
+                    <li>10+ Year Panel Warranty</li>
+                </ul>
+                <button onclick="selectPackage(325000)" class="btn-glow">
+                    Select Package
+                </button>
+            </div>
+
+            <div class="package-card featured">
+                <h3>10kW SME Solution</h3>
+                <p class="price">620,000 ETB</p>
+                <ul>
+                    <li>Perfect for SMEs & Commercial Use</li>
+                    <li>1200–1500 kWh/month</li>
+                    <li>Industrial Grade Inverter</li>
+                    <li>Priority Installation</li>
+                </ul>
+                <button onclick="selectPackage(620000)" class="btn-glow">
+                    Select Package
+                </button>
+            </div>
+
+            <div class="package-card">
+                <h3>20kW Industrial</h3>
+                <p class="price">1,200,000 ETB</p>
+                <ul>
+                    <li>Industrial & Factory Scale</li>
+                    <li>3000+ kWh/month</li>
+                    <li>Advanced Monitoring System</li>
+                    <li>Premium Engineering Support</li>
+                </ul>
+                <button onclick="selectPackage(1200000)" class="btn-glow">
+                    Select Package
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FINANCING CALCULATOR -->
+    <div class="financing-section">
+
+        <h2>Flexible Financing Available</h2>
+        <p>Pay 30% upfront and spread the remaining balance over 24 months.</p>
+
+        <div class="finance-result">
+            <div>
+                <span>Down Payment (30%)</span>
+                <strong id="downPayment">--</strong>
+            </div>
+            <div>
+                <span>Monthly Payment (24 Months)</span>
+                <strong id="monthlyPayment">--</strong>
+            </div>
+        </div>
+
+    </div>
+
+</section>
+
+    </div>
+
+</section>
+
+<script src="js/client.js"></script>
+
+</body>
+</html>

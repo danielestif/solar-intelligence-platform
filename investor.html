@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Investor Portal | Solar Intelligence Platform</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Chart.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body class="investor-body">
+
+<header>
+    <div class="logo">Solar Intelligence Platform</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="investor.html">Investor</a>
+        <a href="client.html">Client</a>
+        <a href="impact.html">Impact</a>
+        <a href="academy.html">Academy</a>
+    </nav>
+</header>
+
+<section class="investor-section">
+
+    <h1 class="investor-title">Investor Growth Simulator</h1>
+    <p class="investor-subtitle">
+        Visualize compound returns and long-term capital growth.
+    </p>
+
+    <div class="investor-grid">
+
+        <!-- Calculator Card -->
+        <div class="glass-card">
+
+            <div class="input-group">
+                <label>Investment Amount ($)</label>
+                <input type="number" id="investment" placeholder="Insert how much you want to invest example: 1000">
+            </div>
+
+            <div class="input-group">
+                <label>Annual Return Rate (%)</label>
+                <input type="number" id="rate" placeholder="Our average return is 32%. Insert your expected return rate">
+            </div>
+
+            <div class="input-group">
+                <label>Investment Period (Years)</label>
+                <input type="number" id="years" placeholder="Insert how long you want to invest example: 5">
+            </div>
+
+            <button onclick="calculateROI()" class="btn-glow">
+                Calculate Growth
+            </button>
+
+        </div>
+
+        <!-- Result Card -->
+       <div class="glass-card result-card">
+    <div id="result"></div>
+    <canvas id="growthChart"></canvas>
+
+    <!-- CTA SECTION -->
+    <div class="investment-cta">
+        <h2>Ready to Grow With Us?</h2>
+        <p>
+            Join Ethiopia’s renewable energy transformation and earn stable,
+            long-term compound returns backed by real solar assets.
+        </p>
+
+        <div class="cta-buttons">
+           <a href="proposal.html" class="btn-primary">
+                Request Investment Proposal
+            </a>
+
+            <a href="consultation.html" class="btn-outline">
+
+                Schedule Consultation
+            </a>
+        </div>
+    </div>
+
+</div>
+
+
+    </div>
+
+</section>
+
+<script src="js/investor.js"></script>
+
+</body>
+</html>

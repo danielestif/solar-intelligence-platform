@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Schedule Consultation | Solar Intelligence Platform</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="consult-body">
+
+<header>
+    <div class="logo">Solar Intelligence Platform</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="investor.html">Investor</a>
+        <a href="client.html">Client</a>
+        <a href="impact.html">Impact</a>
+        <a href="academy.html">Academy</a>
+    </nav>
+</header>
+
+<section class="consult-section">
+
+    <div class="consult-header">
+        <h1>Executive Investment Consultation</h1>
+        <p>
+            Schedule a private strategic session with our renewable energy investment team.
+            Explore capital growth opportunities backed by real solar infrastructure.
+        </p>
+    </div>
+
+    <div class="consult-container">
+
+        <!-- LEFT SIDE - CONSULTATION TOPICS -->
+        <div class="consult-info">
+
+            <h2>Consultation Topics</h2>
+
+            <ul>
+                <li>📊 Portfolio Allocation & Solar Asset Strategy</li>
+                <li>📈 Compound Growth & Dividend Modeling</li>
+                <li>⚖ Risk Mitigation & Capital Protection Framework</li>
+                <li>🌍 ESG & Impact Investment Structuring</li>
+                <li>🏭 Industrial-Scale Solar Expansion Plans</li>
+                <li>💼 Long-Term Exit & Liquidity Planning</li>
+            </ul>
+
+            <p class="consult-note">
+                Each session is tailored to your capital goals and long-term investment strategy.
+            </p>
+
+        </div>
+
+        <!-- RIGHT SIDE - FORM -->
+        <div class="consult-form-card">
+
+            <h2>Book Your Consultation</h2>
+
+            <form id="consultForm">
+
+                <div class="input-group">
+                    <label>Full Name</label>
+                    <input type="text" id="cname" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input type="email" id="cemail" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Phone Number</label>
+                    <input type="tel" id="cphone" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Select Date</label>
+                    <input type="date" id="cdate" required>
+                </div>
+
+                <div class="input-group">
+                    <label>Select Time</label>
+                    <select id="ctime" required>
+                        <option value="">Choose Time</option>
+                        <option>09:00 AM</option>
+                        <option>11:00 AM</option>
+                        <option>02:00 PM</option>
+                        <option>04:00 PM</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label>Primary Discussion Focus</label>
+                    <select id="ctopic" required>
+                        <option value="">Select Topic</option>
+                        <option>Investment Growth Strategy</option>
+                        <option>Portfolio Diversification</option>
+                        <option>Large Scale Capital Deployment</option>
+                        <option>Industrial Solar Investment</option>
+                        <option>ESG Impact Structuring</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn-glow">
+                    Confirm Appointment
+                </button>
+
+            </form>
+
+            <div id="consultMessage"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script src="js/consultation.js"></script>
+
+</body>
+</html>
